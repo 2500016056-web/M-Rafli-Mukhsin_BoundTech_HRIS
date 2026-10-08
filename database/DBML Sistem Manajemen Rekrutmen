@@ -1,0 +1,146 @@
+table cabang {
+  id_cabang integer [pk]
+  nama_cabang varchar(100) [not null]
+  lokasi varchar(200) [not null]
+}
+
+table departemen {
+  id_departemen integer [pk]
+  nama_departemen varchar(100) [not null]
+}
+
+table posisi {
+  id_posisi integer [pk]
+  nama_posisi varchar(100) [not null]
+  id_departemen integer
+}
+
+table pengguna {
+  id_pengguna integer [pk]
+  nama varchar(100) [not null]
+  email varchar(100) [unique,not null]
+  akun varchar(50) [unique, not null]
+  peran enum [not null]
+  status_akun enum [not null]
+  id_cabang integer
+  id_departemen integer
+}
+
+Table lowongan {
+  id_lowongan integer [pk]
+  id_posisi integer
+  id_departemen integer
+  id_cabang integer
+  jumlah_posisi integer [not null]
+  status_lowongan enum [not null]
+  tanggal_buka date [not null]
+  tanggal_tutup date [not null]
+  id_pengaju integer 
+  id_pembuka integer [null]
+}
+
+table kandidat {
+  id_kandidat integer [pk]
+  nama varchar(100) [not null]
+  nik varchar(16) [unique,not null]
+  email varchar(100) [unique, not null]
+  telepon varchar(100) [not null]
+  tanggal_anonimisasi datetime [null]
+}
+
+Table lamaran{
+  id_lamaran integer [pk]
+  id_kandidat integer 
+  id_lowongan integer
+  id_recruiter integer
+  sumber_lamaran enum [not null]
+  id_tahap_saat_ini integer
+  status_lamaran enum [not null]
+  alasan_penolakan text [null]
+  tanggal_lamaran date [not null]
+  tanggal_ditolak date [null]
+}
+
+Table tahap_seleksi{
+  id_tahap integer [pk]
+  id_lamaran integer
+  tahap_lama integer [null]
+  tahap_baru integer
+  id_pelaku integer
+  waktu datetime
+  alasan_perubahan text
+}
+
+Table jadwal_interview {
+  id_jadwal_interiew int [pk]
+  id_lamaran int
+  id_pewawancara int
+  waktu date
+  lokasi_tautan varchar(255)
+  status_jadwal enum
+}
+
+Table penilaian_interview {
+  id_penilaian_interview int [pk]
+  id_jadwal_interview int
+  id_penilai int
+  skor int
+  rekomendasi varchar(50)
+  catatan text
+}
+
+Table offer {
+  id_offer int [pk]
+  id_lamaran int
+  rincian_offer enum
+  id_recruiter int
+  id_pengonfirmasi int
+  id_penyetuju int
+  hasil_verifikasi_anggaran enum
+  tanggal_penyusun date
+  tanggal_pengirim date
+  tanggal_respons date
+}
+
+Table log_audit {
+  id_log_audit int [pk]
+  objek enum
+  id_pelaku int
+  status_lama varchar(50)
+  status_baru varchar(50)
+  alasan text
+  jenis_perubahan varchar(50)
+}
+
+ref: posisi.id_departemen > departemen.id_departemen
+
+ref: pengguna.id_cabang > cabang.id_cabang
+ref: pengguna.id_departemen > departemen.id_departemen
+
+ref: lowongan.id_posisi > posisi.id_posisi
+ref: lowongan.id_departemen > departemen.id_departemen
+ref: lowongan.id_cabang > cabang.id_cabang
+ref: lowongan.id_pembuka > pengguna.id_pengguna
+ref: lowongan.id_pengaju > pengguna.id_pengguna
+
+ref: lamaran.id_kandidat > kandidat.id_kandidat
+ref: lamaran.id_lamaran > lowongan.id_lowongan
+ref: lamaran.id_lowongan > lowongan.id_lowongan
+ref: lamaran.id_recruiter > pengguna.id_pengguna
+ref: lamaran.id_tahap_saat_ini > tahap_seleksi.id_tahap
+
+ref: tahap_seleksi.id_lamaran > lamaran.id_lamaran
+ref: tahap_seleksi.id_pelaku > pengguna.id_pengguna
+
+ref: jadwal_interview.id_lamaran > lamaran.id_lamaran
+ref: jadwal_interview.id_pewawancara > pengguna.id_pengguna
+
+ref: penilaian_interview.id_jadwal_interview > jadwal_interview.id_jadwal_interiew
+ref: penilaian_interview.id_penilai > pengguna.id_pengguna
+
+ref: offer.id_lamaran > lamaran.id_lamaran
+ref: offer.id_recruiter > pengguna.id_pengguna
+ref: offer.id_pengonfirmasi > pengguna.id_pengguna
+ref: offer.id_penyetuju > pengguna.id_pengguna
+
+ref: log_audit.id_pelaku > pengguna.id_pengguna
