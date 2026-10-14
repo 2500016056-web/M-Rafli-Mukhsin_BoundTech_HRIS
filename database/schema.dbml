@@ -72,7 +72,7 @@ Table tahap_seleksi{
 }
 
 Table jadwal_interview {
-  id_jadwal_interiew int [pk]
+  id_jadwal_interview int [pk]
   id_lamaran int
   id_pewawancara int
   waktu date
@@ -124,7 +124,6 @@ ref: lowongan.id_pembuka > pengguna.id_pengguna
 ref: lowongan.id_pengaju > pengguna.id_pengguna
 
 ref: lamaran.id_kandidat > kandidat.id_kandidat
-ref: lamaran.id_lamaran > lowongan.id_lowongan
 ref: lamaran.id_lowongan > lowongan.id_lowongan
 ref: lamaran.id_recruiter > pengguna.id_pengguna
 ref: lamaran.id_tahap_saat_ini > tahap_seleksi.id_tahap
@@ -135,7 +134,7 @@ ref: tahap_seleksi.id_pelaku > pengguna.id_pengguna
 ref: jadwal_interview.id_lamaran > lamaran.id_lamaran
 ref: jadwal_interview.id_pewawancara > pengguna.id_pengguna
 
-ref: penilaian_interview.id_jadwal_interview > jadwal_interview.id_jadwal_interiew
+ref: penilaian_interview.id_jadwal_interview > jadwal_interview.id_jadwal_interview
 ref: penilaian_interview.id_penilai > pengguna.id_pengguna
 
 ref: offer.id_lamaran > lamaran.id_lamaran

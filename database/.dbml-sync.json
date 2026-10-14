@@ -1,0 +1,1850 @@
+{
+    "tables": [
+        {
+            "name": "cabang",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_cabang",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "nama_cabang",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "lokasi",
+                    "type": {
+                        "name": "varchar(200)",
+                        "schemaName": null,
+                        "args": "200",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "departemen",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_departemen",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "nama_departemen",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "posisi",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_posisi",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "nama_posisi",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_departemen",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "pengguna",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_pengguna",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "nama",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "email",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": true,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "akun",
+                    "type": {
+                        "name": "varchar(50)",
+                        "schemaName": null,
+                        "args": "50",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": true,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "peran",
+                    "type": {
+                        "name": "enum",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "status_akun",
+                    "type": {
+                        "name": "enum",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_cabang",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_departemen",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "lowongan",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_lowongan",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_posisi",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_departemen",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_cabang",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "jumlah_posisi",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "status_lowongan",
+                    "type": {
+                        "name": "enum",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "tanggal_buka",
+                    "type": {
+                        "name": "date",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "tanggal_tutup",
+                    "type": {
+                        "name": "date",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_pengaju",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_pembuka",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "kandidat",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_kandidat",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "nama",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "nik",
+                    "type": {
+                        "name": "varchar(16)",
+                        "schemaName": null,
+                        "args": "16",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": true,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "email",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": true,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "telepon",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "tanggal_anonimisasi",
+                    "type": {
+                        "name": "datetime",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "lamaran",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_lamaran",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_kandidat",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_lowongan",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_recruiter",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "sumber_lamaran",
+                    "type": {
+                        "name": "enum",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_tahap_saat_ini",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "status_lamaran",
+                    "type": {
+                        "name": "enum",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "alasan_penolakan",
+                    "type": {
+                        "name": "text",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "tanggal_lamaran",
+                    "type": {
+                        "name": "date",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": true,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "tanggal_ditolak",
+                    "type": {
+                        "name": "date",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "tahap_seleksi",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_tahap",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_lamaran",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "tahap_lama",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "tahap_baru",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_pelaku",
+                    "type": {
+                        "name": "integer",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "waktu",
+                    "type": {
+                        "name": "datetime",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "alasan_perubahan",
+                    "type": {
+                        "name": "text",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "jadwal_interview",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_jadwal_interview",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_lamaran",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_pewawancara",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "waktu",
+                    "type": {
+                        "name": "date",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "lokasi_tautan",
+                    "type": {
+                        "name": "varchar(255)",
+                        "schemaName": null,
+                        "args": "255",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "status_jadwal",
+                    "type": {
+                        "name": "enum",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "penilaian_interview",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_penilaian_interview",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_jadwal_interview",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_penilai",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "skor",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "rekomendasi",
+                    "type": {
+                        "name": "varchar(50)",
+                        "schemaName": null,
+                        "args": "50",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "catatan",
+                    "type": {
+                        "name": "text",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "offer",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_offer",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_lamaran",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "rincian_offer",
+                    "type": {
+                        "name": "enum",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_recruiter",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_pengonfirmasi",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_penyetuju",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "hasil_verifikasi_anggaran",
+                    "type": {
+                        "name": "enum",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "tanggal_penyusun",
+                    "type": {
+                        "name": "date",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "tanggal_pengirim",
+                    "type": {
+                        "name": "date",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "tanggal_respons",
+                    "type": {
+                        "name": "date",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "log_audit",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_log_audit",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "objek",
+                    "type": {
+                        "name": "enum",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_pelaku",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "status_lama",
+                    "type": {
+                        "name": "varchar(50)",
+                        "schemaName": null,
+                        "args": "50",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "status_baru",
+                    "type": {
+                        "name": "varchar(50)",
+                        "schemaName": null,
+                        "args": "50",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "alasan",
+                    "type": {
+                        "name": "text",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "jenis_perubahan",
+                    "type": {
+                        "name": "varchar(50)",
+                        "schemaName": null,
+                        "args": "50",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        }
+    ],
+    "enums": [],
+    "refs": [
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "posisi",
+                    "columns": [
+                        "id_departemen"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "departemen",
+                    "columns": [
+                        "id_departemen"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "pengguna",
+                    "columns": [
+                        "id_cabang"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "cabang",
+                    "columns": [
+                        "id_cabang"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "pengguna",
+                    "columns": [
+                        "id_departemen"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "departemen",
+                    "columns": [
+                        "id_departemen"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "lowongan",
+                    "columns": [
+                        "id_posisi"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "posisi",
+                    "columns": [
+                        "id_posisi"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "lowongan",
+                    "columns": [
+                        "id_departemen"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "departemen",
+                    "columns": [
+                        "id_departemen"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "lowongan",
+                    "columns": [
+                        "id_cabang"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "cabang",
+                    "columns": [
+                        "id_cabang"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "lowongan",
+                    "columns": [
+                        "id_pembuka"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "pengguna",
+                    "columns": [
+                        "id_pengguna"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "lowongan",
+                    "columns": [
+                        "id_pengaju"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "pengguna",
+                    "columns": [
+                        "id_pengguna"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "lamaran",
+                    "columns": [
+                        "id_kandidat"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "kandidat",
+                    "columns": [
+                        "id_kandidat"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "lamaran",
+                    "columns": [
+                        "id_lowongan"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "lowongan",
+                    "columns": [
+                        "id_lowongan"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "lamaran",
+                    "columns": [
+                        "id_recruiter"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "pengguna",
+                    "columns": [
+                        "id_pengguna"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "lamaran",
+                    "columns": [
+                        "id_tahap_saat_ini"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "tahap_seleksi",
+                    "columns": [
+                        "id_tahap"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "tahap_seleksi",
+                    "columns": [
+                        "id_lamaran"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "lamaran",
+                    "columns": [
+                        "id_lamaran"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "tahap_seleksi",
+                    "columns": [
+                        "id_pelaku"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "pengguna",
+                    "columns": [
+                        "id_pengguna"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "jadwal_interview",
+                    "columns": [
+                        "id_lamaran"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "lamaran",
+                    "columns": [
+                        "id_lamaran"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "jadwal_interview",
+                    "columns": [
+                        "id_pewawancara"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "pengguna",
+                    "columns": [
+                        "id_pengguna"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "penilaian_interview",
+                    "columns": [
+                        "id_jadwal_interview"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "jadwal_interview",
+                    "columns": [
+                        "id_jadwal_interview"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "penilaian_interview",
+                    "columns": [
+                        "id_penilai"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "pengguna",
+                    "columns": [
+                        "id_pengguna"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "offer",
+                    "columns": [
+                        "id_lamaran"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "lamaran",
+                    "columns": [
+                        "id_lamaran"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "offer",
+                    "columns": [
+                        "id_recruiter"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "pengguna",
+                    "columns": [
+                        "id_pengguna"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "offer",
+                    "columns": [
+                        "id_pengonfirmasi"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "pengguna",
+                    "columns": [
+                        "id_pengguna"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "offer",
+                    "columns": [
+                        "id_penyetuju"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "pengguna",
+                    "columns": [
+                        "id_pengguna"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "log_audit",
+                    "columns": [
+                        "id_pelaku"
+                    ],
+                    "relation": "*"
+                },
+                {
+                    "schema": "public",
+                    "table": "pengguna",
+                    "columns": [
+                        "id_pengguna"
+                    ],
+                    "relation": "1"
+                }
+            ]
+        }
+    ],
+    "version": 1,
+    "generated_at": "2026-10-14T04:17:50+00:00"
+}
